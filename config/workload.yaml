@@ -12,6 +12,6 @@ spec:
       autoscaling.knative.dev/minScale: "1"
   source:
     git:
-      url: https://github.com/sample-accelerators/customer-api
+      url: https://gitlab.eng.vmware.com/tanzu-southeast-se/customer-rest-api
       ref:
         branch: main
