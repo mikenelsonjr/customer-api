@@ -13,5 +13,9 @@ metadata:
     'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=customer-api'
 spec:
   type: service
-  lifecycle: experimental
+  lifecycle: production
   owner: default-team
+  providesApis:
+  - customer-api
+  consumesApis:
+  - customer-api
