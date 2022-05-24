@@ -1,6 +1,6 @@
 SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='dev.local/customer-api-source')
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
-NAMESPACE = os.getenv("NAMESPACE", default='default')
+NAMESPACE = os.getenv("NAMESPACE", default='development')
 
 k8s_custom_deploy(
     'customer-api',
@@ -20,3 +20,5 @@ k8s_custom_deploy(
 
 k8s_resource('customer-api', port_forwards=["8080:8080"],
             extra_pod_selectors=[{'serving.knative.dev/service': 'customer-api'}])
+
+allow_k8s_contexts('tap-lab')

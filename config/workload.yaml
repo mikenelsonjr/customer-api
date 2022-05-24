@@ -4,6 +4,7 @@ metadata:
   name: customer-api
   labels:
     apps.tanzu.vmware.com/workload-type: web
+    apps.tanzu.vmware.com/has-tests: "true"
     app.kubernetes.io/part-of: customer-api
 spec:
   params:
@@ -12,6 +13,6 @@ spec:
       autoscaling.knative.dev/minScale: "1"
   source:
     git:
-      url: https://gitlab.eng.vmware.com/tanzu-southeast-se/customer-rest-api
+      url: https://github.com/mikenelsonjr/customer-api.git
       ref:
         branch: main
